@@ -3,29 +3,28 @@
 \usepackage[english]{babel}
 \usepackage[margin=1cm]{geometry}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 \usepackage{hyperref}
-\hypersetup{colorlinks,breaklinks,
-            urlcolor=[rgb]{0.6,0,0},
-            linkcolor=[rgb]{0.6,0,0},
-            citecolor=[rgb]{0.6,0,0}}
+\usepackage{natbib}
 \usepackage{microtype}
-\usepackage[skip=3pt]{parskip}
-\usepackage[explicit]{titlesec}
-\usepackage{fouriernc}
-\input{glyphtounicode}
-\pdfgentounicode=1
-\pagenumbering{gobble}
-\newcommand\hreftt[2]{\href{#1}{\texttt{#2}}}
-\renewcommand{\familydefault}{\sfdefault}
-\usepackage{enumitem}
 % List spacing
-\setlist{nosep, leftmargin=*}
-\setlist{parsep=2pt, topsep=2pt, itemsep=2pt, leftmargin=*}
-% Title spacing
-\titlespacing\section{0pt}{8pt plus 2pt minus 2pt}{10pt plus 2pt minus 2pt}
-\titlespacing\subsection{0pt}{4pt plus 2pt minus 2pt}{8pt plus 2pt minus 2pt}
+\usepackage{enumitem}
+% Source Sans Pro font
+\usepackage{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
+% Cambria font
+%\usepackage{fontspec}
+%\setmainfont[Ligatures=TeX]{Cambria}
 
-% Title format
+% Headings format
+\usepackage{titlesec}
+
+\renewcommand{\bibsection}{\section*{Publications}}
+\bibliographystyle{plainnat}
+% Disable page number
+\pagenumbering{gobble}
+
+\usepackage{parskip}
 \makeatletter
 \def\@maketitle{
   \newpage
@@ -35,9 +34,15 @@
   \hrulefill
 }
 \makeatother
+% Headings spacing
+
+\titlespacing\section{0pt}{2pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{2pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
+% List spacing
+\setlist{nosep, leftmargin=*}
+\setlist{parsep=1pt, topsep=1pt, itemsep=1pt, leftmargin=*}
 \title{Kevin Michael Frick}
 \author{}
-\titleformat{\section}{\bfseries\Large}{\noindent\thesection}{0pt}{#1~\hrulefill}
 
 \begin{document}
 
@@ -144,7 +149,4 @@ Collegio Superiore Fellowship \hfill 2017 - 2022
 
 \textbf{Frick, K. M.} What can economists learn from machine learning? In
 \emph{Astrazioni stenografiche. Concetti chiave per vivere consapevolmente la nostra società} (Bononia University Press, 2020). ISBN 9788869236761.
-
-
 \end{document}
-
