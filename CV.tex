@@ -5,42 +5,40 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage{natbib}
 \usepackage{microtype}
-% List spacing
-\usepackage{enumitem}
-% Source Sans Pro font
-\usepackage{sourcesanspro}
-\renewcommand{\familydefault}{\sfdefault}
-% Cambria font
-%\usepackage{fontspec}
-%\setmainfont[Ligatures=TeX]{Cambria}
-
-% Headings format
+\usepackage[parfill=2pt]{parskip}
 \usepackage{titlesec}
-
-\renewcommand{\bibsection}{\section*{Publications}}
-\bibliographystyle{plainnat}
-% Disable page number
+\usepackage{lmodern}
+\input{glyphtounicode}
+\pdfgentounicode=1
 \pagenumbering{gobble}
-
+%\renewcommand{\familydefault}{\sfdefault}
 \usepackage{parskip}
+
+% Headings
+\setcounter{secnumdepth}{0}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}
+% Headings spacing
+\titlespacing\section{0pt}{4pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{4pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}
+% Title format
 \makeatletter
 \def\@maketitle{
   \newpage
-  {\LARGE {\textbf{{\@title}} }} \hfill{\footnotesize \href{mailto:kmfrick98@gmail.com}{\texttt{kmfrick98@gmail.com}} |  \url{kmfrick.github.io} | \url{linkedin.com/in/kmfrick/}}
+  {\Large\textbf{{\@title}}} \hfill Dual citizen, \textbf{Italian} and \textbf{German}
+
+\vspace{-4pt}
+ \href{mailto:kmfrick98@gmail.com}{\texttt{kmfrick98@gmail.com}} |  \url{kmfrick.github.io} \hfill \textbf{Italian}, native | \textbf{English}, IELTS 8.5 | \textbf{Spanish}, fluent
   
-  \vspace{-1em}
-  \hrulefill
+  \vspace{-0.4cm}
+
+\hrulefill
+
+
+
 }
 \makeatother
-% Headings spacing
-
-\titlespacing\section{0pt}{2pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
-\titlespacing\subsection{0pt}{2pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
-% List spacing
-\setlist{nosep, leftmargin=*}
-\setlist{parsep=1pt, topsep=1pt, itemsep=1pt, leftmargin=*}
 \title{Kevin Michael Frick}
 \author{}
 
@@ -76,6 +74,7 @@ BarcelonaTech}.
 
 \begin{itemize}
 
+
 \item
   Worked on the design of \textbf{machine learning} models able to
   learn a measure of occupation-to-occupation \textbf{skill distances}
@@ -92,8 +91,7 @@ BarcelonaTech}.
   \item
   
   Attended two full-immersion practical \textbf{workshops} organized by the French National Research Center (\textbf{CNRS}) on \textbf{optimizing deep learning models} for high-performance computer clusters.
-\end{itemize}
-
+  \end{itemize}
 \textbf{Research Intern \hfill \hspace{1pt} University of Twente \textbar{} 03/2020 - 06/2020}
 \begin{itemize}
 
@@ -150,3 +148,4 @@ Collegio Superiore Fellowship \hfill 2017 - 2022
 \textbf{Frick, K. M.} What can economists learn from machine learning? In
 \emph{Astrazioni stenografiche. Concetti chiave per vivere consapevolmente la nostra società} (Bononia University Press, 2020). ISBN 9788869236761.
 \end{document}
+
