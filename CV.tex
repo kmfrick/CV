@@ -1,4 +1,4 @@
-\documentclass[10pt, a4paper]{extarticle}
+\documentclass[11pt, a4paper]{extarticle}
 \usepackage[footnotes,definitionLists,hashEnumerators,smartEllipses,hybrid]{markdown}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
@@ -7,44 +7,36 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{microtype}
-% List spacing
-\usepackage{enumitem}
-% Source Sans Pro font
-\usepackage{sourcesanspro}
-\renewcommand{\familydefault}{\sfdefault}
-% Paragraph spacing
-\usepackage[parfill=0pt]{parskip}
-% Cambria font
-%\usepackage{fontspec}
-%\setmainfont[Ligatures=TeX]{Cambria}
-% Headings format
+\usepackage[parfill=2pt]{parskip}
 \usepackage{titlesec}
-% Disable page number
+\usepackage{lmodern}
+\input{glyphtounicode}
+\pdfgentounicode=1
 \pagenumbering{gobble}
+%\renewcommand{\familydefault}{\sfdefault}
 
 
 % Headings
 \setcounter{secnumdepth}{0}
-\titleformat*{\section}{\normalfont\large\bfseries}%\color{MidnightBlue}}
-\titleformat*{\subsection}{\bfseries}%\color{MidnightBlue}}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}
 % Headings spacing
-\titlespacing\section{0pt}{1pt plus 1pt minus 1pt}{1pt plus 1pt minus 1pt}
-\titlespacing\subsection{0pt}{1pt plus 1pt minus 1pt}{1pt plus 1pt minus 1pt}
-%% List spacing
-\setlist{nosep, leftmargin=*}
-\setlist{parsep=1pt, topsep=1pt, itemsep=1pt, leftmargin=*}
+\titlespacing\section{0pt}{4pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{4pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}
 % Title format
 \makeatletter
 \def\@maketitle{
   \newpage
-  {\Large\textbf{{\@title}} \par}
+  {\Large\textbf{{\@title}}} \hfill Dual citizen, \textbf{Italian} and \textbf{German}
 
 \vspace{-4pt}
+ \href{mailto:kmfrick98@gmail.com}{\texttt{kmfrick98@gmail.com}} |  \url{kmfrick.github.io} \hfill \textbf{Italian}, native | \textbf{English}, IELTS 8.5 | \textbf{Spanish}, fluent
+  
+  \vspace{-0.4cm}
 
-  Bologna, Italy | \href{mailto:kmfrick98@gmail.com}{\texttt{kmfrick98@gmail.com} |  \url{https://kmfrick.github.io}} \hfill \textbf{Italian}, native  | \textbf{English}, IELTS 8.5/9.0 C2 | \textbf{Spanish}, B2
-  %\hfill\smash{\includegraphics[width=3cm]{frickkm.JPG}}
+\hrulefill
 
-\vspace{-4pt}
+
 
 }
 \makeatother
@@ -55,8 +47,6 @@
 
 
 \maketitle
-\vspace{-0.8em}
-\hrulefill
 
 \markdownInput{CV.md}
 
