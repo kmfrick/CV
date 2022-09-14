@@ -1,54 +1,150 @@
-\documentclass[11pt, a4paper]{extarticle}
-\usepackage[footnotes,definitionLists,hashEnumerators,smartEllipses,hybrid]{markdown}
+\documentclass[11pt, a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage[margin=1cm]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
 \usepackage{hyperref}
+\hypersetup{colorlinks,breaklinks,
+            urlcolor=[rgb]{0.6,0,0},
+            linkcolor=[rgb]{0.6,0,0},
+            citecolor=[rgb]{0.6,0,0}}
 \usepackage{microtype}
-\usepackage[parfill=2pt]{parskip}
-\usepackage{titlesec}
-\usepackage{lmodern}
+\usepackage[skip=3pt]{parskip}
+\usepackage[explicit]{titlesec}
+\usepackage{fouriernc}
 \input{glyphtounicode}
 \pdfgentounicode=1
 \pagenumbering{gobble}
-%\renewcommand{\familydefault}{\sfdefault}
+\newcommand\hreftt[2]{\href{#1}{\texttt{#2}}}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{enumitem}
+% List spacing
+\setlist{nosep, leftmargin=*}
+\setlist{parsep=2pt, topsep=2pt, itemsep=2pt, leftmargin=*}
+% Title spacing
+\titlespacing\section{0pt}{8pt plus 2pt minus 2pt}{10pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{4pt plus 2pt minus 2pt}{8pt plus 2pt minus 2pt}
 
-
-% Headings
-\setcounter{secnumdepth}{0}
-\titleformat*{\section}{\large\bfseries}
-\titleformat*{\subsection}{\bfseries}
-% Headings spacing
-\titlespacing\section{0pt}{4pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
-\titlespacing\subsection{0pt}{4pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}
 % Title format
 \makeatletter
 \def\@maketitle{
   \newpage
-  {\Large\textbf{{\@title}}} \hfill Dual citizen, \textbf{Italian} and \textbf{German}
-
-\vspace{-4pt}
- \href{mailto:kmfrick98@gmail.com}{\texttt{kmfrick98@gmail.com}} |  \url{kmfrick.github.io} \hfill \textbf{Italian}, native | \textbf{English}, IELTS 8.5 | \textbf{Spanish}, fluent
+  {\LARGE {\textbf{{\@title}} }} \hfill{\footnotesize \href{mailto:kmfrick98@gmail.com}{\texttt{kmfrick98@gmail.com}} |  \url{kmfrick.github.io} | \url{linkedin.com/in/kmfrick/}}
   
-  \vspace{-0.4cm}
-
-\hrulefill
-
-
-
+  \vspace{-1em}
+  \hrulefill
 }
 \makeatother
 \title{Kevin Michael Frick}
 \author{}
+\titleformat{\section}{\bfseries\Large}{\noindent\thesection}{0pt}{#1~\hrulefill}
 
 \begin{document}
 
 
 \maketitle
 
-\markdownInput{CV.md}
+\section*{Education}
+
+\textbf{MSc Economic Theory and Econometrics} \hfill \textbf{Toulouse School of Economics \textbar{} 2022 - 2023}
+
+\textbf{MSc Computer Engineering} \hfill  \textbf{ Bologna University
+\textbar{} 2020 - 2022}
+
+\textit{Summa Cum Laude}. Thesis: Autonomous Pricing using Policy Gradient Reinforcement Learning.
+
+Exchanges at \textbf{École Normale Supérieure Paris}, Department of Economics, and at \textbf{UPC
+BarcelonaTech}.
+
+\textbf{BSc Computer Engineering} \hfill \textbf{Bologna University
+\textbar{} 2017 - 2020}
+
+\textit{Summa Cum Laude}. Thesis: Machine Learning for Semantic Visual SLAM.
+
+
+
+
+\section*{Work experience}
+
+
+\textbf{Research Assistant \hfill  \hspace{1pt} Paris School of Economics \textbar{} 10/2021 - 07/2022}
+
+\begin{itemize}
+
+\item
+  Worked on the design of \textbf{machine learning} models able to
+  learn a measure of occupation-to-occupation \textbf{skill distances}
+  of job occupational positions from textual and structured data.
+\item
+  In charge of designing an end-to-end architecture comprising a
+  \textbf{language model} and a neural network for task-driven
+  \textbf{representation learning} for a \textbf{skill matching} task.
+\item
+
+  Project work financed by the French Ministry of Labor, 
+  aimed at evaluating re-training programs for workers from distressed occupations to
+  \textbf{maximize their re-employment} chances.
+  \item
+  
+  Attended two full-immersion practical \textbf{workshops} organized by the French National Research Center (\textbf{CNRS}) on \textbf{optimizing deep learning models} for high-performance computer clusters.
+\end{itemize}
+
+\textbf{Research Intern \hfill \hspace{1pt} University of Twente \textbar{} 03/2020 - 06/2020}
+\begin{itemize}
+
+\item
+  Researched and deployed deep \textbf{neural networks} for semantic
+  segmentation of 3D scenes to improve the localization and mapping
+  (SLAM) capabilities of an unmanned aerial vehicle.
+\item
+
+  Developed a module for the ROS framework in \textbf{C++ and Python}
+  using TensorFlow Lite and ONNX.
+\item
+
+  Acquired proficiency in the process of conducting \textbf{independent
+  research}, from state-of-the-art studies to the formulation and
+  answering of meaningful research questions.
+\end{itemize}
+
+\section*{Programming languages and frameworks}
+C++, Python, R, MATLAB, Java, C\#, Go, SQL, Stata, PyTorch, TensorFlow, SLURM
+
+\section*{Languages and nationality}
+
+ \textbf{Italian} (native), \textbf{English} (bilingual, IELTS 8.5),
+  \textbf{Spanish} (fluent), \textbf{French} (basic). \textbf{Italian} and \textbf{German} dual national.
+
+\section*{Teaching activities}
+
+  Course in \textbf{Argumentation in Artificial Intelligence} \hfill Teaching Assistant, Bologna University, fall 2021
+
+
+  BSc course in \textbf{Software Engineering}\hfill Teaching Assistant, Bologna University, 2021
+
+
+  High school course in \textbf{Competitive Programming} \hfill Teacher, Istituto Tecnico Aldini, Bologna, 2020-2021
+
+
+  High school course in \textbf{Computer Science} \hfill Teacher, Istituto
+  Tecnico Aldini, Bologna, 2020-2021
+
+
+\section*{Scholarships}
+
+TSE Doctoral Track Scholarship for M2 ETE \hfill 2022 - 2023
+
+
+Collegio Superiore Alumni Scholarship \hfill 2022
+
+
+Collegio Superiore Fellowship \hfill 2017 - 2022
+
+\section*{Publications}
+
+\textbf{Frick, K. M.} What can economists learn from machine learning? In
+\emph{Astrazioni stenografiche. Concetti chiave per vivere consapevolmente la nostra società} (Bononia University Press, 2020). ISBN 9788869236761.
+
 
 \end{document}
 
