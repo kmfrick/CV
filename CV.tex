@@ -1,5 +1,4 @@
-\documentclass[11pt, a4paper]{article}
-\usepackage[T1]{fontenc}
+\documentclass[11pt,a4paper]{article}
 \usepackage[english]{babel}
 \usepackage[margin=1cm]{geometry}
 \usepackage[utf8]{inputenc}
@@ -14,15 +13,6 @@
 \pagenumbering{gobble}
 %\renewcommand{\familydefault}{\sfdefault}
 \usepackage{parskip}
-
-% Headings
-\setcounter{secnumdepth}{0}
-\titleformat*{\section}{\large\bfseries}
-\titleformat*{\subsection}{\bfseries}
-% Headings spacing
-\titlespacing\section{0pt}{4pt plus 2pt minus 2pt}{2pt plus 2pt minus 2pt}
-\titlespacing\subsection{0pt}{4pt plus 2pt minus 2pt}{4pt plus 2pt minus 2pt}
-% Title format
 \makeatletter
 \def\@maketitle{
   \newpage
@@ -42,110 +32,87 @@
 \title{Kevin Michael Frick}
 \author{}
 
+\usepackage{titlesec}
+\usepackage{currvita}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[nodayofweek]{datetime}
+\newdateformat{mydatestyle}{\shortmonthname[\THEMONTH]{. }\twodigit{\THEDAY}, \THEYEAR}
+\hypersetup{%
+  colorlinks=true,
+  urlcolor=[rgb]{0.6,0,0},
+  linkcolor=[rgb]{0.6,0,0},
+  citecolor=[rgb]{0.6,0,0},
+  urlbordercolor=[rgb]{0.6,0,0}
+}
+\titleformat{\section}{\scshape\large}{}{0em}{}[\titlerule]
 \begin{document}
-
-
-\maketitle
-
+\date{}
+\thispagestyle{empty}
+\setlength\cvlabelwidth{90pt}
+\begin{cv}{\huge Kevin Michael Frick}
+\section*{Personal Information}
+\begin{cvlist}{}
+	\itemsep -4pt
+	\item[Nationality:] Italian, German
+  \item[Languages:]  Italian (native), English (bilingual, IELTS 8.5), Spanish (fluent), French (fluent)
+  \item[E-mail address:] \texttt{kevin-michael.frick at tse-fr.eu}
+  \item[Website:] \url{kmfrick.github.io}
+\end{cvlist}
+\vspace{-22pt}
 \section*{Education}
-
-\textbf{MSc Economic Theory and Econometrics} \hfill \textbf{Toulouse School of Economics \textbar{} 2022 - 2023}
-
-\textbf{MSc Computer Engineering} \hfill  \textbf{ Bologna University
-\textbar{} 2020 - 2022}
-
-\textit{Summa Cum Laude}. Thesis: Autonomous Pricing using Policy Gradient Reinforcement Learning.
-
-Exchanges at \textbf{École Normale Supérieure Paris}, Department of Economics, and at \textbf{UPC
-BarcelonaTech}.
-
-\textbf{BSc Computer Engineering} \hfill \textbf{Bologna University
-\textbar{} 2017 - 2020}
-
-\textit{Summa Cum Laude}. Thesis: Machine Learning for Semantic Visual SLAM.
-
-
-
-
-\section*{Work experience}
-
-
-\textbf{Research Assistant \hfill  \hspace{1pt} Paris School of Economics \textbar{} 10/2021 - 07/2022}
-
-\begin{itemize}
-
-
-\item
-  Worked on the design of \textbf{machine learning} models able to
-  learn a measure of occupation-to-occupation \textbf{skill distances}
-  of job occupational positions from textual and structured data.
-\item
-  In charge of designing an end-to-end architecture comprising a
-  \textbf{language model} and a neural network for task-driven
-  \textbf{representation learning} for a \textbf{skill matching} task.
-\item
-
-  Project work financed by the French Ministry of Labor, 
-  aimed at evaluating re-training programs for workers from distressed occupations to
-  \textbf{maximize their re-employment} chances.
-  \item
-  
-  Attended two full-immersion practical \textbf{workshops} organized by the French National Research Center (\textbf{CNRS}) on \textbf{optimizing deep learning models} for high-performance computer clusters.
-  \end{itemize}
-\textbf{Research Intern \hfill \hspace{1pt} University of Twente \textbar{} 03/2020 - 06/2020}
-\begin{itemize}
-
-\item
-  Researched and deployed deep \textbf{neural networks} for semantic
-  segmentation of 3D scenes to improve the localization and mapping
-  (SLAM) capabilities of an unmanned aerial vehicle.
-\item
-
-  Developed a module for the ROS framework in \textbf{C++ and Python}
-  using TensorFlow Lite and ONNX.
-\item
-
-  Acquired proficiency in the process of conducting \textbf{independent
-  research}, from state-of-the-art studies to the formulation and
-  answering of meaningful research questions.
-\end{itemize}
-
+\begin{cvlist}{}
+	\item[Present]
+		\textbf{MRes/PhD, Economics}\\
+    Toulouse School of Economics
+  \item[2023]
+    \textbf{MSc Economic Theory and Econometrics} (\emph{Magna cum laude})\\
+    Toulouse School of Economics
+  \item[2023]
+    \textbf{Diploma of the Collegio Superiore} (\emph{Summa cum laude})\\
+    Bologna University  |  Visiting student at \textbf{École Normale Supérieure Paris}
+  \item[2022]
+    \textbf{MSc Computer Engineering} (\emph{Summa cum laude})\\
+    Bologna University
+  \item[2020]
+    \textbf{BSc Computer Engineering} (\emph{Summa cum laude})\\
+    Bologna University
+\end{cvlist}
+\vspace{-22pt}
+\section*{Work Experience}
+\begin{cvlist}{}
+	\item[07/2021 - 08/2022]
+		\textbf{Paris School of Economics / J-PAL Europe}\\
+		Position: Research assistant\\
+		Supervisor: Luc Behaghel, Artur Obminski
+	\item[10/2021 - 07/2022]
+    \textbf{Paris School of Economics / DARES}\\
+		Position: Research assistant\\
+		Supervisor: Thomas Zuber, Yagan Hazard, Damien Mayaux
+	\item[03/2020 - 07/2020]
+		\textbf{University of Twente}\\
+		Position: Research intern\\
+		Supervisor: Stefano Stramigioli, Davide Bicego, Santiago Sanchez-Escalonilla
+\end{cvlist}
+\vspace{-22pt}
+  \section*{Teaching}
+  \begin{cvlist}{}
+  \itemsep -4pt
+  \item[Fall 2021] Argumentation in Artificial Intelligence (BSc), Bologna University
+  \item[Spring 2021] Software Engineering (BSc), Bologna University
+  \item[2020 - 2021] Computer Science (High school), Istituto Tecnico Aldini, Bologna
+  \item[2020 - 2021] Competitive programming (High school), Istituto Tecnico Aldini, Bologna
+  \end{cvlist}
+  \vspace{-22pt}
+\section*{Grants and Scholarships}
+\begin{cvlist}{}
+	\itemsep -4pt
+	\item[2022 - 2023] TSE École Universitaire de Recherche (EUR) Scholarship
+	\item[2022] Collegio Superiore Alumni Scholarship
+	\item[2017 - 2022] Collegio Superiore Fellowship
+\end{cvlist}
+\vspace{-22pt}
 \section*{Programming languages and frameworks}
-C++, Python, R, MATLAB, Java, C\#, Go, SQL, Stata, PyTorch, TensorFlow, SLURM
-
-\section*{Languages and nationality}
-
- \textbf{Italian} (native), \textbf{English} (bilingual, IELTS 8.5),
-  \textbf{Spanish} (fluent), \textbf{French} (basic). \textbf{Italian} and \textbf{German} dual national.
-
-\section*{Teaching activities}
-
-  Course in \textbf{Argumentation in Artificial Intelligence} \hfill Teaching Assistant, Bologna University, fall 2021
-
-
-  BSc course in \textbf{Software Engineering}\hfill Teaching Assistant, Bologna University, 2021
-
-
-  High school course in \textbf{Competitive Programming} \hfill Teacher, Istituto Tecnico Aldini, Bologna, 2020-2021
-
-
-  High school course in \textbf{Computer Science} \hfill Teacher, Istituto
-  Tecnico Aldini, Bologna, 2020-2021
-
-
-\section*{Scholarships}
-
-TSE Doctoral Track Scholarship for M2 ETE \hfill 2022 - 2023
-
-
-Collegio Superiore Alumni Scholarship \hfill 2022
-
-
-Collegio Superiore Fellowship \hfill 2017 - 2022
-
-\section*{Publications}
-
-\textbf{Frick, K. M.} What can economists learn from machine learning? In
-\emph{Astrazioni stenografiche. Concetti chiave per vivere consapevolmente la nostra società} (Bononia University Press, 2020). ISBN 9788869236761.
+    C++, Python, R, MATLAB, Java, C\#, Go, SQL, Stata, PyTorch, TensorFlow, SLURM
+\end{cv}
 \end{document}
-
