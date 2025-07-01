@@ -1,42 +1,16 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage[english]{babel}
-\usepackage[margin=1cm]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{microtype}
-\usepackage[parfill=2pt]{parskip}
-\usepackage{titlesec}
-\usepackage{lmodern}
-\input{glyphtounicode}
-\pdfgentounicode=1
-\pagenumbering{gobble}
-%\renewcommand{\familydefault}{\sfdefault}
-\usepackage{parskip}
-\makeatletter
-\def\@maketitle{
-  \newpage
-  {\Large\textbf{{\@title}}} \hfill Dual citizen, \textbf{Italian} and \textbf{German}
-
-\vspace{-4pt}
- \href{mailto:kmfrick98@gmail.com}{\texttt{kmfrick98@gmail.com}} |  \url{kmfrick.github.io} \hfill \textbf{Italian}, native | \textbf{English}, IELTS 8.5 | \textbf{Spanish}, fluent
-  
-  \vspace{-0.4cm}
-
-\hrulefill
-
-
-
-}
-\makeatother
-\title{Kevin Michael Frick}
-\author{}
-
+\usepackage[margin=1.5cm]{geometry}
+\usepackage[T1]{fontenc}
 \usepackage{titlesec}
 \usepackage{currvita}
+\usepackage{ifthen}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage[nodayofweek]{datetime}
+\usepackage[normalem]{ulem}
+
+\newcommand{\longunderline}[1]{\uline{#1\hfill\mbox{}}}
+
 \newdateformat{mydatestyle}{\shortmonthname[\THEMONTH]{. }\twodigit{\THEDAY}, \THEYEAR}
 \hypersetup{%
   colorlinks=true,
@@ -50,20 +24,18 @@
 \date{}
 \thispagestyle{empty}
 \setlength\cvlabelwidth{90pt}
-\begin{cv}{\huge Kevin Michael Frick}
-\section*{Personal Information}
-\begin{cvlist}{}
-	\itemsep -4pt
-	\item[Nationality:] Italian, German
-  \item[Languages:]  Italian (native), English (bilingual, IELTS 8.5), Spanish (fluent), French (fluent)
-  \item[E-mail address:] \texttt{kevin-michael.frick at tse-fr.eu}
-  \item[Website:] \url{kmfrick.github.io}
-\end{cvlist}
-\vspace{-22pt}
+
+\begin{cv}
+{\huge \longunderline{Kevin Michael Frick}}
 \section*{Education}
 \begin{cvlist}{}
-	\item[Present]
-		\textbf{MRes/PhD, Economics}\\
+  \itemsep -5pt
+
+	\item[Expected 2028]
+		\textbf{PhD Economics}\\
+    Toulouse School of Economics
+      \item[Expected 2024]
+    \textbf{MRes Economics} \\
     Toulouse School of Economics
   \item[2023]
     \textbf{MSc Economic Theory and Econometrics} (\emph{Magna cum laude})\\
@@ -78,41 +50,56 @@
     \textbf{BSc Computer Engineering} (\emph{Summa cum laude})\\
     Bologna University
 \end{cvlist}
-\vspace{-22pt}
+\vspace{-24pt}
 \section*{Work Experience}
 \begin{cvlist}{}
+  \itemsep -5pt
 	\item[07/2023 - 08/2023]
 		\textbf{Paris School of Economics / J-PAL Europe}\\
 		Position: Research assistant\\
-		Supervisor: Luc Behaghel, Artur Obminski
+		References: Luc Behaghel, Artur Obminski
 	\item[10/2021 - 07/2022]
     \textbf{Paris School of Economics / DARES}\\
 		Position: Research assistant\\
-		Supervisor: Thomas Zuber, Yagan Hazard, Damien Mayaux
+		References: Thomas Zuber, Yagan Hazard, Damien Mayaux
 	\item[03/2020 - 07/2020]
 		\textbf{University of Twente}\\
 		Position: Research intern\\
-		Supervisor: Stefano Stramigioli, Davide Bicego, Santiago Sanchez-Escalonilla
+		References: Stefano Stramigioli, Davide Bicego, Santiago Sanchez-Escalonilla
 \end{cvlist}
-\vspace{-22pt}
+\vspace{-24pt}
   \section*{Teaching}
   \begin{cvlist}{}
-  \itemsep -4pt
-  \item[Fall 2021] Argumentation in Artificial Intelligence (TA), Bologna University
-  \item[Spring 2021] Software Engineering (TA), Bologna University
-  \item[2020 - 2021] Computer Science (High school, lecturer), Istituto Tecnico Aldini, Bologna
-  \item[2020 - 2021] Competitive programming (High school, lecturer), Istituto Tecnico Aldini, Bologna
+  \itemsep -5pt
+  \item[Spring 2025] Graduate RCTs and Policy Evaluation (TA) \hfill Toulouse School of Economics
+  \item[Spring 2025] Graduate Program Evaluation (TA) \hfill Toulouse School of Economics
+\item[Spring 2024] Undergraduate Econometrics (TA) \hfill Toulouse School of Economics
+\item[Fall 2023] Graduate R Programming (TA) \hfill Toulouse School of Economics
+  \item[Fall 2021] Argumentation in Artificial Intelligence (TA) \hfill Bologna University
+  \item[Spring 2021] Undergraduate Software Engineering (TA) \hfill Bologna University
   \end{cvlist}
-  \vspace{-22pt}
+  \vspace{-24pt}
+\section*{Other professional activities}
+Refereeing: International Journal of Industrial Organization
+\vspace{-12pt}
 \section*{Grants and Scholarships}
 \begin{cvlist}{}
-	\itemsep -4pt
+	\itemsep -5pt
 	\item[2022 - 2023] TSE École Universitaire de Recherche (EUR) Scholarship
 	\item[2022] Collegio Superiore Alumni Scholarship
 	\item[2017 - 2022] Collegio Superiore Fellowship
 \end{cvlist}
-\vspace{-22pt}
+\vspace{-24pt}
 \section*{Programming languages and frameworks}
-    C++, Python, R, MATLAB, Java, C\#, Go, SQL, Stata, PyTorch, TensorFlow, SLURM
+    C++, Python, R, MATLAB, Julia, Java, C\#, Swift, Go, SQL, Stata, SAS, PyTorch, TensorFlow, SLURM
+\vspace{-12pt}
+\section*{Personal Information}
+\begin{cvlist}{}
+	\itemsep -5pt
+	\item[Nationality:] Italian, German
+  \item[Languages:]  Italian, English, Spanish, French
+  \item[E-mail address:] \texttt{kevin-michael.frick at tse-fr.eu}
+  \item[Website:] \url{kmfrick.github.io}
+\end{cvlist}
 \end{cv}
 \end{document}
